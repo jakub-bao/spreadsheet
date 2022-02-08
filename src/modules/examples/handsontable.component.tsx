@@ -4,11 +4,13 @@ import 'handsontable/dist/handsontable.full.css';
 import {headers} from "../data/tableData";
 import { registerValidator } from 'handsontable/validators';
 import {dropdownValues1, StringMap} from "../data/dropdownValues";
+import {CellMeta, CellProperties} from "handsontable/settings";
 
 registerAllModules();
 
 const hotData = [
     headers,
+    [],[],[]
 ];
 
 function generateDropDownsColumns(dropdownValues:StringMap){
@@ -28,6 +30,9 @@ export function Handsontable(){
         rowHeaders={true}
         licenseKey={'non-commercial-and-evaluation'}
         columns={columns}
+        cells={function(this: CellProperties, row: number, column: number, prop: string | number){
+            if (row===0) return {readOnly:true} as CellMeta
+        }}
         // columnSettings={[]}
     />
 }
