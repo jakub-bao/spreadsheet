@@ -1,7 +1,7 @@
 import {HotTable} from '@handsontable/react';
 import {registerAllModules} from 'handsontable/registry';
 import 'handsontable/dist/handsontable.full.css';
-import {headers} from "./tableData";
+import {headers} from "../data/tableData";
 
 registerAllModules();
 

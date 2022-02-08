@@ -10,7 +10,9 @@ function App() {
             <img src={logo} className="App-logo" alt="logo" />
             <Link to={'/'}><span>React Spreadsheet Demo</span></Link>
         </header>
-        <Router/>
+        <div className='content'>
+            <Router/>
+        </div>
     </div>
 }
 

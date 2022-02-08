@@ -1,5 +1,6 @@
 import Spreadsheet from "react-spreadsheet";
-import {headers} from "./tableData";
+import {headers} from "../data/tableData";
+import {Typography} from "@mui/material";
 
 
 export const Reactspreadsheet = () => {
@@ -7,5 +8,5 @@ export const Reactspreadsheet = () => {
         headers.map(value=>({value})),
         [{ value: "Strawberry" }, { value: "Cookies" }],
     ];
-    return <Spreadsheet data={data} />;
+    return <Spreadsheet data={data} />
 };
