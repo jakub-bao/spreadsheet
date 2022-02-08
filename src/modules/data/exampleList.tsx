@@ -18,7 +18,7 @@ export const examples:Example[] = [{
     url: 'handsontable',
     name: 'Handson table',
     demo: <Handsontable/>,
-    whyWontWork: []
+    whyWontWork: ['']
 },{
     url: 'react-spreadsheet',
     name: 'React spreadsheet',

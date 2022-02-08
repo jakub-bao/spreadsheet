@@ -11,8 +11,10 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import {examples} from "../data/exampleList";
+import {Link} from "react-router-dom";
 
-const pages = ['Products', 'Pricing', 'Blog'];
+// const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Header = () => {
@@ -44,7 +46,7 @@ const Header = () => {
                         component="div"
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
-                        LOGO
+                        XLS DEMO
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -76,9 +78,11 @@ const Header = () => {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                            {examples.map(({name,url}) => (
+                                <MenuItem key={name}>
+                                    <Link to={url}>
+                                        <Typography textAlign="center">{name}</Typography>
+                                    </Link>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -89,17 +93,18 @@ const Header = () => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
-                        LOGO
+                        XLS DEMO
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                {page}
-                            </Button>
+                        {examples.map(({name, url}) => (
+                            <Link to={url}>
+                                <Button
+                                    key={name}
+                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                >
+                                    {name}
+                                </Button>
+                            </Link>
                         ))}
                     </Box>
 

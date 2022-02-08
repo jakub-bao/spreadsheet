@@ -1,5 +1,5 @@
 import {List, ListItemText, Typography} from "@mui/material";
-import {Example} from "./data/exampleList";
+import {Example} from "../data/exampleList";
 
 const styles = {
     problemsHeading: {

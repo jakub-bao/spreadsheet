@@ -2,20 +2,32 @@ import {HotTable} from '@handsontable/react';
 import {registerAllModules} from 'handsontable/registry';
 import 'handsontable/dist/handsontable.full.css';
 import {headers} from "../data/tableData";
+import { registerValidator } from 'handsontable/validators';
+import {dropdownValues1, StringMap} from "../data/dropdownValues";
 
 registerAllModules();
 
 const hotData = [
     headers,
-    ["2020", 10, 11, 12, 13],
-    ["2021", 20, 11, 14, 13],
-    ["2022", 30, 15, 12, 13]
 ];
+
+function generateDropDownsColumns(dropdownValues:StringMap){
+    return Object.entries(dropdownValues).map(([columnName, valueList])=>({type: 'dropdown', source:valueList}))
+}
+
+
+const columns = [{},...generateDropDownsColumns(dropdownValues1)];
+
+
+// registerValidator();
 
 export function Handsontable(){
     return <HotTable
         data={hotData}
         colHeaders={true}
+        rowHeaders={true}
         licenseKey={'non-commercial-and-evaluation'}
+        columns={columns}
+        // columnSettings={[]}
     />
 }
