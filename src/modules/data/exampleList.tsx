@@ -24,7 +24,7 @@ export const examples:Example[] = [{
     name: 'React spreadsheet',
     demo: <Reactspreadsheet/>,
     whyWontWork: [
-        `The library doesn't seem to let us specify multiple custom Cell components`,
-        `It only allows us to specify a single cell component used everywhere`
+        `Doesn't support menus or skip logic`,
+        `Doesn't support multiple custom components for cells. All cells have to share the same component`
     ]
 }]

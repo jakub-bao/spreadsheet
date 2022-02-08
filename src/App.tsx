@@ -9,6 +9,7 @@ function App() {
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <Link to={'/'}><span>React Spreadsheet Demo</span></Link>
+            {/*<NavigationMenu/>*/}
         </header>
         <div className='content'>
             <Router/>
