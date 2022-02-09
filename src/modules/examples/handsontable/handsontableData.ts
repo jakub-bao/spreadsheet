@@ -11,14 +11,29 @@ type HandsonColumn = {
 }
 
 const columnTypeMap = {
-    dropdownSelect: 'dropdown'
+    dropdownSelect: 'dropdown',
+    number: 'numeric',
+    boolean: 'dropdown',
+    text: 'text'
 }
 
 function transformColumnDefinitions(columnList:Column[]){
-    return columnList.map(({type,valueList})=>({
-        type: columnTypeMap[type]||type,
-        source: type===ColumnType.dropdownSelect?valueList:undefined
-    }))
+    return columnList.map(({type,valueList})=>{
+        let source;
+        switch (type){
+            case ColumnType.dropdownSelect:
+                source = valueList;
+                break;
+            case ColumnType.boolean:
+                source=['Yes','No']
+                break;
+
+        }
+        return {
+            type: columnTypeMap[type],
+            source,
+        }
+    })
 }
 
 export const columnDefinition:HandsonColumn[]= transformColumnDefinitions(columnList);

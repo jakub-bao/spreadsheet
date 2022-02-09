@@ -9,12 +9,12 @@ export enum ColumnType {
 }
 
 export type ColumnMeta = {
-    id:string;
+    name:string;
     type: ColumnType;
 }
 
 export type Column = ColumnMeta & {
-    fullName: string;
+    // fullName: string;
     // id:string;
     // type: ColumnType;
     valueList?: string[];

@@ -24,7 +24,7 @@ export function Handsontable(){
         licenseKey={'non-commercial-and-evaluation'}
         columns={columnDefinition}
         cells={function(this: CellProperties, row: number, column: number, prop: string | number){
-            if (row===0) return {readOnly:true} as CellMeta
+            return {readOnly:row===0} as CellMeta
         }}
     />
 }
