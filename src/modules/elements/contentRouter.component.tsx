@@ -2,7 +2,7 @@ import React from "react";
 import {Route, Routes} from "react-router-dom";
 import {Landingpage} from "./landingpage.component";
 import {examples} from "../data/exampleList";
-import { Outcome } from "./outcome.component";
+import {Outcome} from "./outcome.component";
 
 const styles = {
     root: {

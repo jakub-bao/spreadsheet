@@ -1,6 +1,5 @@
 import Spreadsheet from "react-spreadsheet";
 import {headers} from "../data/tableData";
-import {Typography} from "@mui/material";
 
 
 export const Reactspreadsheet = () => {
