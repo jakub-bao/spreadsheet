@@ -1,6 +1,6 @@
-export type StringMap = {[key:string]:string[]};
+import {StringListMap} from "./tableData.types";
 
-export const dropdownValues1:StringMap = {
+export const dropdownValues:StringListMap = {
     Gender: [
         'Female',
         'Male',
@@ -74,5 +74,37 @@ export const dropdownValues1:StringMap = {
         "Program Management: Administrative Staff",
         "Program Management: Finance Staff",
         "Program Management: Legal Staff"
+    ],
+    'Employed through Prime or Sub IP?':[
+        "Prime",
+        "Sub"
+    ],
+    'Mode of Hire':[
+        "Salary",
+        "Contract",
+        "Non-Monetary ONLY",
+    ],
+    'Primary Program Area?':[
+        "Above Site: Blood supply safety",
+        "Above Site: HMIS, surveillance, & research",
+        "Above Site: Human resources for health",
+        "Above Site: Injection safety",
+        "Above Site: Laboratory systems strengthening",
+        "Above Site: Laws, regulations & policy environment",
+        "Above Site: Policy, planning, coordination & management of disease control programs",
+        "Above Site: Procurement & supply chain management",
+        "Above Site: Public financial management strengthening",
+        "Above Site: Not Disaggregated",
+        "Above Site: Program Management",
+        "Site Level: Care and Treatment (C&T)",
+        "Site Level: Testing (HTS)",
+        "Site Level: Socio-economic (SE)",
+        "Site Level: Prevention (PREV) PrEP",
+        "Site Level: Prevention (PREV) VMMC",
+        "Site Level: Prevention (PREV) Other",
+    ],
+    'Deliver services DIRECTLY to beneficiaries?':[
+        "Direct Service Delivery",
+        "Non-Service Delivery",
     ]
 }

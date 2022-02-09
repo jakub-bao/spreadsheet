@@ -1,6 +1,6 @@
 import React, {ReactElement} from "react";
 import {Luckysheet} from "../examples/luckysheet.component";
-import {Handsontable} from "../examples/handsontable.component";
+import {Handsontable} from "../examples/handsontable/handsontable.component";
 import {Reactspreadsheet} from "../examples/reactspreadsheet.component";
 
 export type Example = {
