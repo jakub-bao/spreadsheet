@@ -2,7 +2,6 @@ import {HotTable} from '@handsontable/react';
 import {registerAllModules} from 'handsontable/registry';
 import 'handsontable/dist/handsontable.full.css';
 import {CellMeta, CellProperties} from "handsontable/settings";
-import {columnList} from "../../data/tableData";
 import {columnDefinition, initialData} from "./handsontableData";
 
 registerAllModules();

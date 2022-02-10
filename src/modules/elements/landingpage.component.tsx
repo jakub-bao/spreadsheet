@@ -6,7 +6,7 @@ export function Landingpage(){
     return <>
         <Typography variant='h4'>Tested libraries</Typography>
         <List>
-            {examples.map(({name,url})=><ListItem><Link to={url}>{name}</Link></ListItem>)}
+            {examples.map(({name,url})=><ListItem key={url}><Link to={url}>{name}</Link></ListItem>)}
         </List>
     </>
 }

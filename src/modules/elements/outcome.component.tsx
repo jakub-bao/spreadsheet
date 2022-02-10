@@ -14,7 +14,7 @@ export function Outcome({example}:{example:Example}){
         {demo}
         <Typography variant={'h5'} style={styles.problemsHeading}>Problems</Typography>
         <List>
-            {whyWontWork.map(reason=><ListItemText>{reason}</ListItemText>)}
+            {whyWontWork.map(reason=><ListItemText key={reason}>{reason}</ListItemText>)}
         </List>
     </>
 }

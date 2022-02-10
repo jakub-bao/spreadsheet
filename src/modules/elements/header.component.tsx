@@ -97,7 +97,7 @@ const Header = () => {
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {examples.map(({name, url}) => (
-                            <Link to={url}>
+                            <Link to={url} key={url}>
                                 <Button
                                     key={name}
                                     sx={{ my: 2, color: 'white', display: 'block' }}

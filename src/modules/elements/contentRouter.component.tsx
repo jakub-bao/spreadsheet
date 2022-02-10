@@ -14,7 +14,7 @@ export default function ContentRouter({}:{}) {
     return <div style={styles.root}>
         <Routes>
             <Route path='/' element={<Landingpage/>}/>
-            {examples.map((example)=><Route path={example.url} element={<Outcome example={example}/> }/>)}
+            {examples.map((example)=><Route path={example.url} key={example.url} element={<Outcome example={example}/> }/>)}
         </Routes>
     </div>
 }

@@ -23,12 +23,6 @@ export enum ColumnNames{
     covid="In past year provided support for the COVID response?",
     totalExpenditure="Sum of Annual PEPFAR Expenditure, excluding Fringe",
     fringe="Annual PEPFAR Fringe Expenditure",
-    // level4Check="Level4Check",
-    // level5Check="Level5Check",
-    // level6Check="Level6Check",
-    // level7Check="Level7Check",
-    // level8Check="Level8Check",
-    // level9Check="Level9Check",
     comments="Comments"
 }
 
@@ -58,12 +52,6 @@ const columnMetadata:ColumnMeta[] = [
     {name: ColumnNames.covid, type: ColumnType.boolean},
     {name: ColumnNames.totalExpenditure, type: ColumnType.number},
     {name: ColumnNames.fringe, type: ColumnType.number},
-    // {name: ColumnNames.level4Check, type: ColumnType.type},
-    // {name: ColumnNames.level5Check, type: ColumnType.type},
-    // {name: ColumnNames.level6Check, type: ColumnType.type},
-    // {name: ColumnNames.level7Check, type: ColumnType.type},
-    // {name: ColumnNames.level8Check, type: ColumnType.type},
-    // {name: ColumnNames.level9Check, type: ColumnType.type},
     {name: ColumnNames.comments, type: ColumnType.text}
 ]
 
