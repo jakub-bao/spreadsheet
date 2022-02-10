@@ -7,7 +7,8 @@ export const initialData = [
 ];
 
 type HandsonColumn = {
-
+    type:string;
+    source?:string[]
 }
 
 const columnTypeMap = {
@@ -17,7 +18,7 @@ const columnTypeMap = {
     text: 'text'
 }
 
-function transformColumnDefinitions(columnList:Column[]){
+function transformColumnDefinitions(columnList:Column[]):HandsonColumn[]{
     return columnList.map(({type,valueList})=>{
         let source;
         switch (type){
@@ -37,5 +38,3 @@ function transformColumnDefinitions(columnList:Column[]){
 }
 
 export const columnDefinition:HandsonColumn[]= transformColumnDefinitions(columnList);
-
-console.log('handson column list', columnDefinition)

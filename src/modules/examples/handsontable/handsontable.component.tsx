@@ -6,14 +6,15 @@ import {columnDefinition, initialData} from "./handsontableData";
 
 registerAllModules();
 
+function isTestEnv(){
+    return process.env.NODE_ENV==='test'
+}
 
-// function generateDropDownsColumns(dropdownValues:StringMap){
-//     return Object.entries(dropdownValues).map(([columnName, valueList])=>({type: 'dropdown', source:valueList}))
-// }
-
-
-
-
+let tableSettings = {};
+if (isTestEnv()) tableSettings = {
+    renderAllRows: true,
+    viewportColumnRenderingOffset: 10000
+};
 
 export function Handsontable(){
     return <HotTable
@@ -25,5 +26,6 @@ export function Handsontable(){
         cells={function(this: CellProperties, row: number, column: number, prop: string | number){
             return {readOnly:row===0} as CellMeta
         }}
+        settings={tableSettings}
     />
 }
