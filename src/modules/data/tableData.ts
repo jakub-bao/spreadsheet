@@ -66,4 +66,3 @@ function generateColumnList(columnMetadata: ColumnMeta[], columnNames: StringMap
 
 export const columnList:Column[] = generateColumnList(columnMetadata, ColumnNames,dropdownValues)
 
-console.log('Internal column list',columnList)
